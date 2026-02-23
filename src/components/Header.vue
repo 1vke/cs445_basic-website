@@ -17,9 +17,8 @@ const items = ref([
 </script>
 
 <template>
-	<div class="card">
-		<Menubar :model="items">
-			<template #item="{ item, props }">
+	<Menubar :model="items">
+		<template #item="{ item, props }">
 				<router-link v-if="item.route" v-slot="{ href, navigate, isExactActive }" :to="item.route" custom>
 					<a :href="href" v-bind="props.action" @click="navigate" :class="{ 'active-route': isExactActive }">
 						<span :class="item.icon" />
@@ -31,20 +30,15 @@ const items = ref([
 					<span class="ml-2">{{ item.label }}</span>
 				</a>
 			</template>
-		</Menubar>
-	</div>
+	</Menubar>
 </template>
 
 <style scoped>
-.card {
-    padding: 1rem;
-}
 a, a span {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .active-route {
     color: var(--p-primary-color);
-    font-weight: bold;
     background-color: var(--p-menubar-item-focus-background, var(--p-content-hover-background));
     border-radius: var(--p-menubar-base-item-border-radius);
 }
