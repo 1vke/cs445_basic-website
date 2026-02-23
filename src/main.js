@@ -5,6 +5,7 @@ import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 import 'primeicons/primeicons.css';
 import './style.css'
+import './reset.css'
 
 const app = createApp(Root);
 
