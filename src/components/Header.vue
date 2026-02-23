@@ -17,7 +17,7 @@ const items = ref([
 </script>
 
 <template>
-	<Menubar :model="items">
+	<Menubar class="header" :model="items">
 		<template #item="{ item, props }">
 				<router-link v-if="item.route" v-slot="{ href, navigate, isExactActive }" :to="item.route" custom>
 					<a :href="href" v-bind="props.action" @click="navigate" :class="{ 'active-route': isExactActive }">
@@ -34,6 +34,9 @@ const items = ref([
 </template>
 
 <style scoped>
+.header {
+	margin: 1rem 0;
+}
 a, a span {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
