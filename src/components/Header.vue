@@ -4,14 +4,19 @@ import Menubar from 'primevue/menubar';
 
 const items = ref([
     {
-        label: 'Home',
-        icon: 'pi pi-home',
+        label: 'About',
+        icon: 'pi pi-info-circle',
         route: '/'
     },
     {
-        label: 'About',
-        icon: 'pi pi-star',
-        route: '/about'
+        label: 'Gallery',
+        icon: 'pi pi-images',
+        route: '/gallery'
+    },
+    {
+        label: 'Contact',
+        icon: 'pi pi-envelope',
+        route: '/contact'
     }
 ]);
 </script>
